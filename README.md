@@ -9,7 +9,7 @@
 // distintas formas de almacenarse, cookies y/o sesiones
 
 
-#### Instalar composer --> getcomposer.org
+### Instalar composer --> getcomposer.org
 Tener actualizado php versión mínima 7.0
 powershell // ssl puerto 443->4430 // php artisan serve // opt/lampp lamp.start
 sudo dpkg -i paquete.deb // service mysql stop
@@ -18,18 +18,18 @@ sudo dpkg -i paquete.deb // service mysql stop
 composer create-project --prefer-dist laravel/laravel proyecto / permisos
 cp server.php index.php
 
-*Idioma
+* Idioma
 composer require laraveles/spanish
 php artisan laraveles:install-lang
 
-*Migraciones y creación de modelos, controladores (resource para crear esqueleto CRUD)
+* Migraciones y creación de modelos, controladores (resource para crear esqueleto CRUD)
 php artisan make:migration create_alumnos_table
 php artisan make:model Alumno -m
 php artisan make:controller AlumnosConstroller --resource
 php artisan make:auth
 php artisan migrate
 
-*Laravel Collective
+* Laravel Collective
 composer require ranabd36/laravelcollective
 composer require "laravelcollective/html":"^5.5”
 
@@ -80,10 +80,10 @@ Route::get('alumnos/show/{id}','AlumnosController@show')->name('alumnos.show');
 
 // Formulario con Laravel Collective
 {!! Form::open(['method' => 'POST', 'route' => ['alumnos.borrar']]) !!}
-<button class="btn btn-danger" type="submit" title='Borrar'
-onclick="return confirm('¿Seguro que desea borrar alumno?')">Borrar
-</button>
-<input type="hidden" name="id" value="{{$alumno->id}}">
+    <button class="btn btn-danger" type="submit" title='Borrar' onclick="return confirm('¿Seguro que desea borrar   alumno?')"> Borrar
+    </button>
+    <input type="hidden" name="id" value="{{$alumno->id}}">
 {!! Form::close() !!}
+
 --> Route::post('/alumnos-borrar','AlumnosController@borrar')->name('alumnos.borrar');
 --> $alumno = Alumno::findOrFail($request->id); $alumno->delete(); return redirect()->route('home');
