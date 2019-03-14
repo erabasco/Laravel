@@ -14,6 +14,11 @@ Tener actualizado php versión mínima 7.0
 powershell // ssl puerto 443->4430 // php artisan serve // opt/lampp lamp.start
 sudo dpkg -i paquete.deb // service mysql stop
 
+# composer globar require laravel/installer 
+instalar en htdocs
+instala toodas las dependencias que vienen de simphony y todo lo que necesita
+
+
 ### Creación de proyecto
 composer globar require laravel/installer // instala laravel
 
