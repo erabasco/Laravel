@@ -15,6 +15,8 @@ powershell // ssl puerto 443->4430 // php artisan serve // opt/lampp lamp.start
 sudo dpkg -i paquete.deb // service mysql stop
 
 ### Creación de proyecto
+composer globar require laravel/installer // instala laravel
+
 composer create-project --prefer-dist laravel/laravel proyecto / permisos
 cp server.php index.php
 
